@@ -1,0 +1,21 @@
+.Footer {
+  background: $purple;
+  margin-top: 8rem;
+  text-align: center;
+  padding: 1rem;
+  color: $white;
+
+  span {
+    font-weight: normal;
+    font-size: $small-font-size;
+  }
+
+  a {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &:hover {
+    color: $white;
+  }
+}

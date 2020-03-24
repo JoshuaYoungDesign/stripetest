@@ -1,0 +1,15 @@
+.BarSeparator {
+  position: relative;
+
+  &:not(:first-child) {
+    padding-top: 5rem;
+  }
+
+  & + & {
+    margin-top: 5rem;
+
+    &:before {
+      @include divider;
+    }
+  }
+}

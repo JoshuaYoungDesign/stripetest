@@ -1,0 +1,12 @@
+title: The MacArthurs are Adopting
+description: "The MacArthur family is adopting from South Korea."
+baseurl: ""
+keywords: adoption,south korea,family,internation adoption,adopt
+url: "https://adopt.macarthur.me"
+exclude: [node_modules, webpack.config.js, Gemfile, Gemfile.lock, package.json, package-lock.json, critical.js]
+markdown: kramdown
+permalink: /updates/:title
+future: true
+excerpt_separator: <!--more-->
+plugins:
+  - jekyll-sitemap

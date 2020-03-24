@@ -1,0 +1,23 @@
+<header class="Header {% if page.url != '/' %} Header--page {% endif %}" id="top">
+
+  {% include nav.html %}
+
+  <div class="Header-background lazy-load" data-background-image="/assets/img/family-bw.jpg"></div>
+
+  {% if page.url == '/' %}
+
+    <div class="Container Header-container">
+
+      <h1 class="Header-title">
+        {{ include.title }}
+      </h1>
+
+      <h4 class="Header-subTitle">
+        {{ include.subTitle }}
+      </h4>
+
+    </div>
+
+  {% endif %}
+
+</header>

@@ -1,0 +1,136 @@
+html,
+body {
+  font-size: 62.5%;
+  height: 100%;
+  text-align: center;
+  color: $gray;
+  font-family: $sans-serif-font-family;
+}
+
+p,
+a,
+span,
+th,
+td,
+li,
+button,
+select,
+blockquote,
+time,
+i {
+  margin: 0 0 3px;
+  line-height: 1.45;
+  font-size: $regular-font-size;
+  font-weight: 300;
+}
+
+time {
+  margin: -1.5rem 0 2rem;
+  display: block;
+  color: $gray--mediumLight;
+}
+
+blockquote {
+  margin: 0 2rem 2rem 2rem;
+  padding: 2rem 2.5rem;
+  color: $gray--light;
+  background: $gray--veryExtraLight;
+  border-radius: 5px;
+
+  @include media($tablet) {
+    margin: 0 1rem 2rem 1rem;
+  }
+}
+
+small {
+  display: block;
+  color: $gray--mediumLight;
+  font-weight: normal;
+  font-size: $small-font-size;
+
+  a {
+    font-size: inherit;
+  }
+}
+
+a, button {
+  color: $purple;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $purple--dark;
+  }
+}
+
+a,
+button {
+  &:focus {
+    outline: $purple;
+  }
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $serif-font-family;
+  font-weight: 700;
+  margin: 2rem 0 1.5rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: $giant-font-size;
+  line-height: 1.25;
+
+  @include media($tablet) {
+    font-size: $large-font-size;
+  }
+
+  main & {
+    font-size: $large-font-size;
+    margin-bottom: 5rem;
+
+    @include media($tablet) {
+      font-size: $medium-font-size;
+    }
+
+    &:after {
+      @include divider;
+      position: relative;
+      width: 100px;
+      left: 0;
+      transform: translateX(0) skew(50deg);
+      margin-top: 2rem;
+    }
+  }
+}
+
+h2 {
+  font-size: $medium-font-size;
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: $sans-serif-font-family;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+ol, ul {
+  margin-bottom: 1.5rem;
+}

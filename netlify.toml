@@ -1,4 +1,13 @@
 [build]
+  publish = "_site"
   command = "npm run build"
-  functions = "functions"
-  publish = "public"
+  functions = "lambda"
+
+[context.production.environment]
+  NODE_VERSION = "v10.15.3"
+
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+    Cache-Control = "public, max-age=2628000, must-revalidate"

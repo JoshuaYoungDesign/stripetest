@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+{% include head.html %}
+
+<body id="body">
+
+  <div id="pageWrapper">
+
+    {% assign postDate = page.date | date: '%B %d, %Y' %}
+
+    {%
+      include header.html
+      subTitle=postDate
+    %}
+
+    <main>
+      <a class="Breadcrumb" href="/updates">Back to All Updates</a>
+      <h1>
+        {{page.title}}
+      </h1>
+      <time>
+        {{postDate}}
+      </time>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+  </div>
+
+</body>
+
+</html>

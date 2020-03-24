@@ -1,0 +1,26 @@
+---
+layout: default
+title: MacArthur Adoption
+---
+
+{%
+  include header.html
+  title="Our family is growing!"
+  subTitle="The MacArthurs are adopting from South Korea."
+%}
+
+<main>
+
+  <section class="Section BarSeparator" id="why">
+    <h2>A Little About Us</h2>
+    {% capture why %}{% include copy/why.md %}{% endcapture %}{{ why | markdownify}}
+  </section>
+
+  <section class="Section BarSeparator">
+    <h2>Stay Up to Date</h2>
+    {% capture more %}{% include copy/more.md %}{% endcapture %}{{ more | markdownify}}
+    <br>
+    <img class="Section-image lazy-load" data-src="assets/img/family-church.jpg" alt="MacArthur Family Photo">
+  </section>
+
+</main>

@@ -1,0 +1,43 @@
+.Button {
+  background: $purple;
+  border: 2px solid $purple;
+  color: $white;
+  padding: 1rem 2rem;
+  border-radius: $border-radius;
+  display: inline-block;
+  font-family: $sans-serif-font-family;
+  text-align: center;
+  margin: 0;
+
+  &:hover {
+    color: $purple;
+    background: none;
+  }
+
+  &--transparent {
+    background: rgba($white, 0);
+    color: $purple;
+
+    &:hover {
+      color: $purple--dark;
+      border-color: $purple--dark;
+    }
+  }
+}
+
+.ButtonGroup {
+  margin-bottom: 3rem;
+
+  @include media($mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Button {
+    margin: 1rem 1rem 0rem 0;
+
+    @include media($mobile) {
+      margin-right: 0;
+    }
+  }
+}

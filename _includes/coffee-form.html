@@ -1,0 +1,182 @@
+<form action="/charge" method="post" id="paymentForm" class="Form">
+
+  <div class="BarSeparator">
+
+    <div class="Form-row">
+
+      <label class="Form-label">
+        Quantity &amp; Blend
+      </label>
+
+      <ul class="Form-list">
+        <li class="Form-listItem">
+          <div>
+            <label for="blend_commuter">
+              Commuter &mdash; $18
+            </label>
+            <small>
+              Light roast | blackberry, citrus, brown sugar. 12oz bag.
+            </small>
+          </div>
+          <div>
+            <input required type="number" min="0" value="0" name="blend_commuter" id="blend_commuter">
+          </div>
+        </li>
+        <li class="Form-listItem">
+          <div>
+            <label for="blend_woodsman">
+              Woodsman &mdash; $18
+            </label>
+            <small>
+              Medium roast | oranges, chocolate, cedar. 12oz bag.
+            </small>
+          </div>
+          <div>
+            <input required type="number" min="0" value="0" name="blend_woodsman" id="blend_woodsman">
+          </div>
+        </li>
+        <li class="Form-listItem">
+          <div>
+            <label for="blend_commuter">
+              Dark Horse &mdash; $18
+            </label>
+            <small>
+              Dark roast | toasted marshmallow, black pepper, cavendish pipe tobacco. 12oz bag.
+            </small>
+          </div>
+          <div>
+            <input required type="number" min="0" value="0" name="blend_dark_horse" id="blend_dark_horse">
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="name">
+        Grind
+      </label>
+
+      <select name="grind">
+        <option value="whole_bean">Whole Bean</option>
+        <option value="ground">Ground</option>
+      </select>
+
+    </div>
+
+  </div>
+
+  <div class="BarSeparator">
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="name">
+        Name
+      </label>
+
+      <input required type="text" name="name" id="name" />
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="email">
+        Email Address
+      </label>
+
+      <input required type="email" name="email" id="email" />
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="phone">
+        Phone Number
+      </label>
+
+      <input required type="tel" name="phone" id="phone" />
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="address">
+        Address (If you work at Ramsey Solutions, just put that!)
+      </label>
+
+      <input required type="text" name="address" id="address">
+
+    </div>
+
+    <div class="Form-row">
+
+      <h3>Need This Shipped? ($8 flat rate!)</h3>
+
+      <small class="Form-description">
+        For those in the Franklin/Spring Hill, TN area, we'll coordinate pickup or delivery. If you're out of the area and would like your coffee shipped, we'll send you an invoice via email.
+      </small>
+
+      <div class="Form-checkboxWrapper">
+        <input type="checkbox" name="should_ship" id="should_ship">
+        <label for="should_ship">Yes, I would like this shipped for me.</label>
+      </div>
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="message">
+        Message (Optional)
+      </label>
+
+      <textarea name="message"></textarea>
+
+    </div>
+
+    <div class="Form-row">
+
+      <label class="Form-label" for="additional_donation">
+        Additional Donation
+        <small class="Form-description">Optional, but appreciated. :)</small>
+      </label>
+
+      <div class="Form-inputWrapper">
+        <i>$</i>
+        <input required type="number" min="0" value="0" name="additional_donation" id="additional_donation">
+      </div>
+    </div>
+
+    <div class="Form-row" id="payment_row">
+
+      <label class="Form-label" for="address">
+        Payment Card
+
+        <small class="Form-description">Payments securely processed by <a href="https://stripe.com/" target="_blank"
+            ref="noopener">Stripe</a>.</small>
+      </label>
+
+      <div id="cardElement"></div>
+
+      <span class="Form-alert" id="cardErrors" role="alert"></span>
+
+    </div>
+
+    <div class="Form-row Form-splitRow">
+
+      <div>
+        <button id="submitButton" class="Form-submit Button">Submit Payment</button>
+      </div>
+
+      <div>
+        <small id="shipping_total" style="display:none;">Includes shipping!</small>
+        <h4 class="Form-total">Total: <span id="total">$0</span></h4>
+      </div>
+
+    </div>
+
+  </div>
+
+  <span class="Alert" style="display: none;" id="alert"></span>
+
+</form>

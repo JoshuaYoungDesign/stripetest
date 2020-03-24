@@ -1,0 +1,16 @@
+.Section {
+  position: relative;
+
+  &:not(:first-child) {
+    padding-top: 5rem;
+  }
+
+  &-image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .Button {
+    margin: 2rem .5rem 0 0;
+  }
+}

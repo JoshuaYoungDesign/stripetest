@@ -1,0 +1,33 @@
+$black: #000000;
+$white: #ffffff;
+$gray: #373836;
+$green: #5bbd8c;
+$gray--light: lighten($gray, 10%);
+$gray--mediumLight: lighten($gray, 40%);
+$gray--extraLight: lighten($gray, 60%);
+$gray--veryExtraLight: lighten($gray, 75%);
+$purple: #9A94BC;
+$pink: #ed6b86;
+$purple--dark: darken($purple, 10%);
+
+$border-radius: 25px;
+
+$giant-font-size: 9rem;
+$larger-font-size: 7rem;
+$large-font-size: 5rem;
+$medium-font-size: 3.5rem;
+$medium-ish-font-size: 2.25rem;
+$regular-font-size: 1.8rem;
+$small-font-size: 1.5rem;
+
+$large: 1200px;
+$medium: 1024px;
+$small: 992px;
+$tablet: 768px;
+$mobile: 600px;
+$tiny: 400px;
+
+$serif-font-family: 'Playfair Display', serif;
+$sans-serif-font-family: 'Montserrat', sans-serif;
+
+$purple-bar-box-shadow: inset 0 -20px 0 $purple;
