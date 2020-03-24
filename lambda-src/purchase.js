@@ -95,13 +95,13 @@ exports.handler = async function(event) {
   }
 
   let charge;
-  let chargeDescription = `Coffee purchase ${data.should_ship ? "(with shipping) " : ""}from ${data.name}`
+  let chargeDescription = `Food purchase ${data.should_ship ? "(with shipping) " : ""}from ${data.name}`
 
   if (data.should_ship) {
     try {
       charge = await stripe.charges.create({
         amount: data.total,
-        currency: 'usd',
+        currency: 'aud',
         source: data.token.id,
         receipt_email: data.email,
         description: chargeDescription,
@@ -126,9 +126,9 @@ exports.handler = async function(event) {
   try {
     let airtablePromise = saveToAirtable(airTableData);
     let emailPromise = sgMail.send({
-      to: 'ahmacarthur@gmail.com',
-      from: 'ahmacarthur@gmail.com',
-      subject: 'Coffee has been purchased!',
+      to: 'joshua.young.design@gmail.com',
+      from: 'joshua.young.design@gmail.com',
+      subject: 'Order is being processed',
       html: `${data.name} just purchased the following items: ${JSON.stringify(data.items)}.`,
     });
 
